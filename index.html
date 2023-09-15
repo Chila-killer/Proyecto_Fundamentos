@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de compras</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <script src="./assets/js/main.js" type="module" de></script>
+</head>
+<body class="body">
+
+    <!-- loader -->
+    <div class="loader loader__hidden">
+        <div class="loader__container">
+            <span></span>
+        </div>
+    </div>
+
+    <!-- header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="/" class="nav__logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.92 56.48" class="logo__icon">
+                    <path fill="currentColor" d="M28.58,15.39H25.16L35.78,36H31.49L20.67,15.71,8.23,38.82H18.94l3-5.43h-3.4l-1.47,2.54h-4l2.69-5.09H25.85l4.28,8H40.67ZM17.23,28.21l3.57-6.6,3.57,6.6Z">
+                    </path>
+                  </svg>  
+            </a>
+
+            <div class="nav__menu">
+                <button type="button" class="nav__btn btn__close">
+                    <i class='bx bxs-x-square'></i> 
+                </button>
+                <ul class="nav__list">
+                    <nav class="nav__items">
+                        <a class="nav__link" href="#">Inicio</a>
+                    </nav>
+                    <nav class="nav__items">
+                        <a class="nav__link" href="#footer__section">Info</a>
+                    </nav>
+                    <nav class="nav__items">
+                        <a class="nav__link nav__cart" href="#cart">Carrito</a>
+                    </nav>
+                    <nav class="nav__items">
+                        <a class="nav__link nav__support" href="#support">Soporte</a>
+                    </nav>
+                </ul>
+            </div>
+              
+            <div class="nav__buttons">
+                <button type="button" class="nav__btn btn__cart">
+                    <i class='bx bxs-shopping-bags'></i>
+                    <span class="notify">0</span>
+                </button>
+
+                <button type="button" class="nav__btn btn__menu">
+                    <i class='bx bxs-grid-alt'></i>
+                </button>
+
+                <button type="button" class="nav__btn btn__dark">
+                    <i class='bx bxs-moon'></i>
+                </button>
+
+            </div>
+        </nav>
+    </header>
+
+    <!-- main -->
+    <main class="main">
+        <div class="rotating-text-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.92 56.48" class="logo__icon">
+                <path fill="currentColor" d="M28.58,15.39H25.16L35.78,36H31.49L20.67,15.71,8.23,38.82H18.94l3-5.43h-3.4l-1.47,2.54h-4l2.69-5.09H25.85l4.28,8H40.67ZM17.23,28.21l3.57-6.6,3.57,6.6Z">
+                </path>
+              </svg>
+            <h2>Bienvenido a mi proyecto de e-comerce</h2>
+            <h2>Por Josua Garcia Taboada</h2>
+          </div>
+          
+          
+        <section class="products section">
+            <h2 class="products__title section__title">Productos</h2>
+            <div class="products__container container">
+            </div>
+        </section>
+        <div class="modal">
+            <img src="" alt="" class=".img__modal">
+        </div>
+    </main>
+
+    <!-- cart -->
+    <div class="cart" id="cart">
+        <div class="cart__container">
+            <div class="cart__header">
+                <h3 class="cart__title">Carrito de compras</h3>
+                <button type="button" class="cart__btn btn__close">
+                    <i class='bx bxs-x-square'></i>
+                </button>
+            </div>
+
+            <div class="cart__body">
+                <!-- <div class="article__image">
+                    <img src="https://res.cloudinary.com/duu1imwxs/image/upload/v1677270464/eCommerce/shirt1_prckre.png" alt="Producto 1">
+                </div>
+                <div class="article__content">
+                    <h3 class="article__title">Camiseta de manga corta con cuello redondo</h3>
+                    <span class="article__price">$10</span>
+                    <div class="article__quantity">
+                        <button type="button" class="article__quantity__btn article__minus">
+                            <i class='bx bx-minus' ></i>
+                        </button>
+                        <span class="article__quantity__text">1</span>
+                        <button type="button" class="article__quantity__btn article__plus">
+                            <i class='bx bx-plus' ></i>
+                        </button>
+                    </div>
+                    <button type="button" class="article__btn remove__from__cart">
+                        <i class='bx bxs-trash'></i>
+                    </button>
+                </div>
+            </article> -->
+            </div>
+
+            <div class="cart__footer">
+                <div class="cart__count">
+                    <span class="cart__count__text">Articulos</span>
+                    <span class="cart__count__item">0</span>
+                </div>
+
+                <div class="cart__total">
+                    <span class="cart__total__text">Total</span>
+                    <span class="cart__total__item">$0</span>
+                </div>
+
+                <button type="button" class="cart__btn btn__buy">Comprar</button>
+            </div>
+
+        </div>
+        
+    </div>
+
+    <!-- product image -->
+    <div class="product__img ">
+        <div class="product__img__modal">
+            <div class="product__img__header">
+                <h3 class="img__title">Nombre del producto</h3>
+                <button type="button" class="img__btn btn__close">
+                    <i class='bx bxs-x-square'></i>
+                </button>
+            </div>
+
+            <div class="img__body">
+                <article class="product__img__article">
+                    <div class="article__product__img">
+                        <button type="button" class="product__btn__img add__to__cart" data-id="${product.id}">
+                            <i class='bx bxs-cart-add' ></i>
+                        </button>
+                        <img src="https://res.cloudinary.com/duu1imwxs/image/upload/v1677270464/eCommerce/shirt1_prckre.png" alt="Producto 1">
+                    </div>
+    
+                    <div class="article__product__content">
+                        <span class="product__description">*Descripcion generica Lorem ipsum dolor, sit amet consectetur adipisicing elit.</span>
+                        <span class="article__price">Precio: $10</span>
+                        <span class="product__stock">Disponibles: 5</span>
+
+                        <!-- <div class="article__product__quantity">  
+                            <button type="button" class="article__quantity__btn article__minus">
+                                <i class='bx bx-minus' ></i>
+                            </button>
+                            <span class="article__quantity__text">1</span>
+                            <button type="button" class="article__quantity__btn article__plus">
+                                <i class='bx bx-plus' ></i>
+                            </button>
+                        </div> -->
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <!-- Support -->
+    <div class="support__modal" id="support">
+        <div class="support__container">
+            <div class="support__header">
+                <h2>Contáctame</h2>
+                <button type="button" class="img__btn btn__close">
+                    <i class='bx bxs-x-square'></i>
+                </button>
+            </div>
+
+            <div class="support__body">
+                <h3>Correo: darkhonorsalvatore@gmail.com</h3>
+                <h3>Número: 5585399296</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer  section" id="footer__section">
+        <div class="footer__container container">
+            <div class="footer__top">
+                <div class="footer__left">
+                    <h3 class="footer__title">Sobre nosotros</h3>
+                    <p class="footer__text">&copy Josuas by Josua una empresa socialmente responsable, sin afanes o fines monetarios 
+                        innecesarios, con el fin de apoyar la economia local, nacional y o globlal, impulsando el progreso y el libre mercado para todas y todos ofreciendo oportunidades equitativas.</p>
+                </div>
+                <div class="footer__right">
+                    <h3 class="footer__title">Redes Sociales</h3>
+                    <ul class="footer__social">
+                        <li class="footer__item">
+                            <a href="https://github.com/Chila-killer" class="footer__link" target="_blank">
+                                <i class='bx bxl-github'></i>
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="https://www.instagram.com/mr.deep_purple/" class="footer__link" target="_blank">
+                                <i class='bx bxl-instagram-alt'></i>
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="https://www.youtube.com/channel/UCj_rQA9hqN7930dK53IBa8A" class="footer__link" target="_blank">
+                                <i class='bx bxl-youtube'></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__text">&copy Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+

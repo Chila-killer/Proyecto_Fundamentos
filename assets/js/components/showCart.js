@@ -6,7 +6,6 @@ function showCart() {
     const cartHeader = document.querySelector('.nav__cart')
     const navSupport = document.querySelector('.nav__support') 
     const support = document.querySelector('.support__modal')
-    
 
     btnCart.addEventListener('click', e => {
         cart.classList.toggle('show__cart')
@@ -24,6 +23,7 @@ function showCart() {
     })
     navSupport.addEventListener('click', e => {
         support.classList.add('show__support')
+        modalDOM.classList.remove('show__image')
     })
     support.addEventListener('click', e => {
         if (e.target.closest('.btn__close')) {

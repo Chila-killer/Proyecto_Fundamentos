@@ -118,7 +118,7 @@ function cart(db, printProducts) {
         cart = []
         printCart()
         printProducts()
-        window.alert(`Gracias por su compra`)
+        window.alert(`Gracias por su compra, te amo`)
     }
 
     printCart()
@@ -160,7 +160,8 @@ function cart(db, printProducts) {
     const productDOM = document.querySelector(".products__container")
     const cartClose = document.querySelector('.cart')
     const menu = document.querySelector('.nav__menu')
-    
+    const supporModal = document.querySelector('.support__modal')
+
     function printProduct(id) {
         let modal = id
         const product = db.find(p => p.id === modal)
@@ -211,7 +212,7 @@ function cart(db, printProducts) {
             modalDOM.classList.add('show__image')
             cartClose.classList.remove('show__cart')
             menu.classList.remove('show__menu')
-            
+            supporModal.classList.remove('show__support')
             }
     }
     modalDOM.addEventListener('click', e => {

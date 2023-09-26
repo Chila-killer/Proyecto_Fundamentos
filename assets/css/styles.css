@@ -645,13 +645,15 @@ button {
   width: 100%;
   height: 30vh;
   background-color: var(--bg-color);
-  z-index: var(--z-fixed);
+  z-index: 50;
   transition: top .5s ease-in-out;
   margin: auto;
+  overflow: hidden;
 }
 
 .support__container {
   display: grid;
+  justify-content: center;
   grid-template-columns: 1fr;
   grid-template-rows: 10% 90%;
   height: calc(100vh - var(--header-height));
